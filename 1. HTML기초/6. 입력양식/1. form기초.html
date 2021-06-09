@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <!-- form  -->
+    <form action="/login" method="POST" autocomplete="off" novalidate>
+        <!-- action 속에는 url?를 넣는다 어디로 갈 건지 -->
+        <!-- get은 기본적으로 모든 정보를 링크창에 드러낸다. 비밀번호는 조금;;
+             POST를 사용하면 마킹해서 안보인다.
+             autocomplete는 사용자 이용기록이 안보이게함
+            novalidate는 이메일 입력하라는 경고창을 삭제시킴. 직접 짜고싶을때 쓰면 좋음 -->
+
+        <input type="email" name="id" placeholder="아이디를 입력!">
+        <!-- placeholder 입력하는 힌트 -->
+       
+        <input type="password" name="pw" placeholder="비밀번호를 입력!">
+        <!-- password는 입력하면 모자이크처리 -->
+      
+        <button type="submit">로그인</button>
+    </form>
+</body>
+</html>

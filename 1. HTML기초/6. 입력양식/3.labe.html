@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    
+    <form action="#">
+
+
+        <label>
+            <input type="checkbox" name="auto-login"> 자동로그인
+            <!-- input은 닫는 태그가 없어서 텍스트를 감쌀 수 없어 label이 나옴.-->
+        </label>
+
+        <input type="checkbox" name="auto-login" id="auto">
+        <label for="auto">자동로그인</label>
+            <!-- 옛날방식 라벨. 실무에서 라벨 이렇게 쓸 수 있다. 
+            for = auto 를 위한 라벨이다.  -->
+
+        <br>
+        <label>
+            # 이름 : <input type="text">
+            <!-- 칸 말고 이름 텍스트를 눌러도 커서가 생기면 좋겠다 ux측면에서. -->
+        </label>
+    </form>
+</body>
+</html>

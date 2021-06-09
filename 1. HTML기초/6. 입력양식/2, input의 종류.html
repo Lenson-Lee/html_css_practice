@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    
+    <form action="/register" method="post"> 
+        # 아이디: <input type="text"><br>
+        # 비밀번호: <input type="password"><br>
+        # 이메일: <input type="email" value="abc1234@naver.com"><br>
+        <!-- value속성 미리 넣어두면 미리 나온다. -->
+        <!-- textarea는 input이 아니라 row속성이다 -->
+
+        # 취미: 
+        <input type="checkbox"> 음악감상
+        <input type="checkbox"> 게임
+        <input type="checkbox"> 영화보기<br>
+
+        # 이메일 수신 여부
+        <!-- radio 버튼은 그룹화를 시켜야지 복수선택이 풀린다. name속성을 맞추면 된다. -->
+       
+        <input type="radio" name="email-verify" checked> 예
+        <input type="radio" name="email-verify" disabled> 아니오 <br>
+        <!-- checked 설정하면 처음부터 선택지가 선택 된 채로 실행된다.
+             disabled는 체크 못하게 막음 ㅋㅋ 좌석예매할 때 체크 못하는경우 -->
+
+        # SMS 수신 여부
+        <input type="radio" name="SMS-verify"> 예
+        <input type="radio" name="SMS-verify"> 아니오 <br>
+        
+        # 파일 첨부
+        <input type="file"> <br>
+        
+        # 범위
+        <input type="range" min="0" max="30" step="5" value="3"> <br>
+
+        # 주문 수량
+        <input type="number" value="1">
+        
+        <input type="hidden" value="메롱">
+        <!-- input을 만들어야 서버에 전송된다. 내용/값을 보내야 하는데 사용자가 보면 안되는건
+            hidden으로 숨겨서 만들면 된다. 네이버 검색창에도 hidden 엄청 많다.-->
+        
+        <br>
+
+        <button id="cm" type="button">그냥버튼</button>
+        <!-- 내가 버튼 기능을 자바스크립트로 연동/커스텀하고싶을때 -->
+        <button type="submit">전송버튼</button>
+        <!-- 입력내용을 서버로 보내는 버튼  -->
+        <button type="reset">초기화버튼</button>
+        
+
+    </form>
+
+    <script>
+        cm.onclick = e => {
+            alert('하이~');
+        };
+    </script>
+</body>
+</html>

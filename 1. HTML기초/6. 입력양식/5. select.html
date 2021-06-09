@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    
+    <form action="#">
+     
+        <select>
+
+            <optgroup label="Coffee">
+            <!-- 그룹옵션같이 소제목으로 분류해줌 지역선택이나 이메일에서 자주 사용 -->
+                <option>Americano</option>
+                <option selected>Caffe Latte</option>
+                <option disabled>Cappuccino</option>
+            </optgroup>
+
+            <optgroup label="Juice">
+                <option>Orange Juice</option>
+                <option>Lime Juice</option>
+            </optgroup>
+
+        </select>
+        <!-- 젤 위에거가 첫 칸에 나오게 되어있지만 selected 속성을 주면 그게 먼저 뜸
+             disable은 나오긴 나오지만 선택이 안된다. -->
+
+        <hr>
+        <!-- 원랜 쓰면안되는데 걍 씀 -->
+        <input type="text" list="fruits">
+        <!-- 리스트 속성에 연관시키면 데이터 리스트에 따라 자동완성문 연결된다.
+            태그나 옵션들은 디자인에서 일일이 하겠지만 개발에서는 서버에서 따서 쓸 예정 -->
+
+        <datalist id="fruits">
+            <option>Apple</option>
+            <option>Orange</option>
+            <option>Mango</option>
+            <option>Pineapple</option>
+            <option>Peach</option>
+            <option>Grape</option>            
+        </datalist>
+    </form>
+
+</body>
+</html>
