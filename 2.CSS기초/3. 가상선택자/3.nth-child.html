@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .fruits > li:nth-child(5) {
+            color: rgb(255, 217, 0);
+        }
+        .fruits > li:nth-child(2n){
+            color: blueviolet;
+        }
+        .fruits > li:nth-child(2n + 1){
+            color: burlywood;
+        }
+        .fruits > li:nth-child(3n + 1){
+            font-style: italic;
+        }
+        /* n에 0부터 넣어보기
+        2n이라 하지 않아도 짝수 even으로 가능
+        홀수는 odd */
+
+        .food > p:nth-child(1){
+            font-size: 1.3em;
+        }
+        /* p보다 nthchild를 먼저 보고 food에 속한지 보고 p를 보고 작동해서
+        div를 첫번째 자식으로 봐 작동 안한다. ->2로 바꾸면 작동함. 걍 안쓸듯  */
+
+        .food > p:nth-of-type(1){
+            font-size: 1.3em;
+            color: brown;
+        }
+        /* p태그 중 1번째를 보는거. 순서대로 내려가 nth-child보다 논리적으로 보기 쉽다. */
+    
+        .fruits li:not(.orange) {
+            list-style: none;
+            /* ul 후르츠 클래스의 li들은 리스트 점을 전부 제거해라
+            not(.오렌지만 빼고) */
+        }
+
+    </style>
+</head>
+<body>
+     <!-- ul.fruits>li*4 -->
+     <ul class="fruits">
+        <li>딸기</li>
+        <li>사과</li>
+        <li class="orange">오렌지</li>
+        <li>망고</li>
+        <li>바나나</li>
+        <li>복숭아</li>
+        <li>파인애플</li>
+    </ul>
+
+    <div class="food">
+        <!-- div+p*2+span -->
+        <div>짜장면</div>
+        <p>볶음밥</p>
+        <p>닭강정</p>
+        <span>짬뽕</span>
+    </div>
+</body>
+</html>

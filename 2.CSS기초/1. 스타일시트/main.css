@@ -1,0 +1,9 @@
+
+@import url(./side.css);
+/* side.css가 여기로 불러들어온 격 side의 태그가 여기에서 다같이 적용된다. */
+
+
+h1, p {
+    color: red;
+    background: orange;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul>.orange {
+            color: orange;
+            /* ul의 자식인 클래스 오렌지에게 적용
+            결국 마지막 선택자가 스타일링이 되고, 앞은 조건이 된다. */
+        }
+
+        div>h1 {
+            font-size: 13px;
+            color: brown;
+            /* 안녕안녕은 부모가 body. 메롱이가 div 속의 h1태그다. */
+        }
+
+        div>ul>li.orange {
+            font-size: 1.5em;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- emmet 문법(플러그인 이름이 emmet) -->
+
+    <h1>안녕안녕</h1>
+    <div>
+        <h1>메롱메롱</h1>
+        <ul>
+            <li id="apple">사과</li>
+            <li>딸기</li>
+            <li class="orange">오렌지</li>
+        </ul>
+        <!--orange클래스를 가진 태그 오렌지 -->
+
+        <div>당근</div>
+        <p>토마토</p>
+        <span class="orange">오렌지</span>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li.orange {
+            background: gray;
+        }
+        span.orange {
+            background: red;
+        }
+        li#apple {
+            text-align: center;
+        }
+        /* @이면서 a이면서 c이면서 id가 @인 조건에만 적용
+        @.a.c#@ */
+        
+
+        
+    </style>
+
+</head>
+<body>
+    
+    <!-- emmet 문법(플러그인 이름이 emmet) -->
+    <!-- div>ul>li*3 -->
+
+    <div>
+        <ul>
+            <li id="apple">사과</li>
+    <!-- id가 애플인 태그  -->
+            <li>딸기</li>
+            <li class="orange">오렌지</li>
+        </ul>
+    <!--orange클래스를 가진 태그 오렌지 -->
+
+        <div>당근</div>
+        <p>토마토</p>
+        <span class="orange">오렌지</span>
+    </div>
+
+</body>
+</html>

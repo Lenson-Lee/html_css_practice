@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+   
+        * {
+            color: rebeccapurple;
+        } /* 전체선택자 * 혹은 곱하기 * 로도 쓰이는데 여기선 전체선택 */
+   
+        body {
+            font-size: 24px;
+        } /* 실무에선 전체를 해야한다면 별*보다는 바디를 선택한다. */
+
+    
+        ul * {
+            background: tomato;
+        }  /* ul 밑에 있는 후손 모두라는 뜻. */
+    </style>
+
+</head>
+<body>
+    
+    <!-- emmet 문법(플러그인 이름이 emmet) -->
+    <!-- div>ul>li*3 -->
+
+    <div>
+        <ul>
+            <li>사과</li>
+            <li>딸기</li>
+            <li>오렌지</li>
+        </ul>
+
+    <!-- div+p+span 같은 형제 -->
+        <div>당근</div>
+        <p>토마토</p>
+        <span>오렌지</span>
+    </div>
+
+</body>
+</html>
