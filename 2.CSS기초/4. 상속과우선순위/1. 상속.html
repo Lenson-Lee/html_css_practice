@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .eco {
+            color: red;
+            text-align: center;
+        }
+        /* 생태계 eco에만 쓰고싶은데 다 상속 되어버린다..
+        텍스트쪽 속성을 일괄적으로 만질 때는 이게 편한데 이중에 하나만 바꾸고싶으면
+        자식을 바꿔라. 하단의 plant가 자식개념. */
+
+        .plant > div:first-child {
+            color: blue;
+            /* plant의 div의 첫째것이라는 조건
+            우선순위 점수에 따라서 상속이 다름 */
+        }
+    </style>
+</head>
+<body>
+    <!-- .eco>.animal+.plant -->
+    <div class="eco">생태계
+        <div class="animal">동물</div>
+        <div class="plant">식물
+            <div>소나무</div>
+            <div>튤립</div>
+            <div>해바라기</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div {
+            border: 2px solid black;
+        }
+        html {
+            /* 기본 폰트 font-size: 16px; */
+            /* html에서 서체를 설정한건 rem의 기준점을 잡으려고 수정한 거임.
+            10px이 전체적으로 상속되버리기 때문에 
+            하단의 body에서 사이즈 설정을 하여서 전체가 10px이 되는걸 막아주고
+            전체적인 서체 설정을 하고 있다. */
+            font-size: 10px;
+        }
+        body {
+            font-size: 20px;
+        }
+        .root {
+            width: 60rem;
+            font-size: 1.5em;
+        }
+        /* em은 폰트사이즈 대비 너비?-> 배수 (몇 배
+        width에 쓰면 문제가 글자크기 수정하면 나머지 영역도 다같이 쪼그라든다.
+        그래서 rem을 사용함. 
+        rem = html태그의 사이즈에 관여하여 적용된다.  */
+        .parent {
+            width: 50%;
+        }
+        .child {
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- .root>.parent>.child*2 -->
+    <div class="root">Root
+        <div class="parent">Parent
+            <div class="child">Child1</div>
+            <div class="child">Child2</div>
+        </div>
+    </div>
+</body>
+</html>

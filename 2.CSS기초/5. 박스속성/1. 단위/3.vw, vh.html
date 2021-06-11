@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            /* w50p */
+            width: 50vw;
+            /* 지정안하면 기본값이 100이라 %비율로 조정이 쉽지만
+            세로는 기본값이 없어서 vh를 보통 쓴다.
+            %는 부모대비 vw, vh는 자기 자신의 비율. */
+            height: 80vh;
+            /* 스크린 크기가 변해도 일정비율을 유지하게 한다.
+            주로 세로에서 쓰고 width는 퍼센트로 써도 무관함.*/
+            background: orange;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box"></div>
+</body>
+</html>

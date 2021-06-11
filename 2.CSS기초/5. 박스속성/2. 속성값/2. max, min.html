@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent {
+            width: 600px;
+            height: 300px;
+            margin: 20px;
+            border: 4 solid blue;
+        }
+        .child {
+            width: 100%;
+            height: 200px;
+            min-width: 400px;
+            max-width: 800px;
+            /* 부모가 크거나 작아져도 최대최소 800/400px유지 */
+            background: orange;
+        }
+    </style>
+</head>
+<body>
+    <!-- .parent>child -->
+    <div class="parent">
+        <child> </child>
+    </div>
+    <!-- 왜 차일드 박스 안떠?? -->
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        div {
+            color: red ;
+        }
+        #c-yellow {
+            color: yellow;
+        }
+        .c-green {
+            color: green;
+        }
+        div {
+            color: blue;
+        }
+        body {
+            color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div id='c-yellow' class='c-green' style="color: orange;">Hello!</div>
+    <div id='c-yellow' class='c-green' >Hello!</div> 
+    <div class='c-green' >Hello!</div> 
+    <div>Hello!</div> 
+    <!-- style태그 - ID - class - div(파랑) 순으로 강하다.
+    div태그는 밑으로 쓰는게 더 우선이고 상속을 이기는건 개별스타일태그.
+
+    !important 태그는 아주 중요한 태그 - 점수계산하면 알거야..  -->
+
+</body>
+</html>

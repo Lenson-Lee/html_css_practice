@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box{
+            widows: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+        .box1 {
+            background: aqua;
+        }
+        .box2 {
+            background: violet;
+        }
+        .box3 {
+            background: purple;
+        }
+        /* 
+        이렇게 크기는 일정하게 하고싶어서 코드를 줄이는 법은
+        div를 사용하는건 좋지 않고 8강을 응용해서 공통 클래스 하나를 더 부여함
+        box box1처럼
+        .box1 {
+            width: 100px;
+            height: 100px;
+            background: aqua;
+        }
+        .box2 {
+            width: 100px;
+            height: 100px;
+            background: violet;
+        }
+        .box3 {
+            width: 100px;
+            height: 100px;
+            background: purple;
+        } */
+
+    </style>
+</head>
+<body>
+    
+    <!-- .box$*3 -->
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+</body>
+</html>

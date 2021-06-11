@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* ul 속의 li 에 : 두개 쓰는걸 권고함.content는 텍스트를 넣음. */
+        /* beford,after요소는 content속성이 필.수.임
+        근데 도형이라 못 넣으면 content:''으로 비워둠 display도 필수다.*/
+
+        ul li::before {
+            content: '번호';
+            color: red;
+            margin-right: 10px;
+        }
+        ul li::after {
+            content:'';
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50;
+            margin-left: 10;
+            /* 정사각형 상태에서 bdrd50주면 원이 된다. */
+            
+            background:purple 
+            
+            /* 백그라운드 왜 안돼.. */
+        }
+
+    </style>
+</head>
+<body>
+    
+    <!-- ul>li{$}*10    &는 시퀀스. 연속된 숫자가 들어간다. 근데 삼만개면 어떡함 css로 해결!-->
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+    </ul>
+
+</body>
+</html>
