@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+            display: block;
+            background: red;
+            font-size: 2em;
+            color: yellow;
+            padding: 20px;
+            width: 300px;
+            /* span은 인라인 속성이라 가로세로 수정이 불가능
+            -> display 들어간다 block으로 설정하면 블록속성(가로를 다 차지하는) 들어감.
+            반대 성질들은 인라인도 가능 */
+        }
+        a {
+            background: yellowgreen;
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+        }
+
+        input {
+            width: 100px;
+            height: 50px;
+            display: inline-block;
+            /* input은 기본값이 inline-block이다. */
+        }
+
+        input:nth-child(3) {
+            display: none;
+            /* display: none은 완전 안보이게 된다. */
+        }
+        input:nth-child(4) {
+            /* 투명도 설정. 자리는 지킨다.
+                자바스크립트랑 자주 쓰이는 기능. ex-댓글창 열기,닫기
+                 */
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <span id=hello>안녕하세요</span>
+    <a href="#">게시판</a>
+    <a href="#">방명록</a>
+
+    <!-- .box>input*5 -->
+    <div class="box">
+        <input type="text" value="1">
+        <input type="text" value="2">
+        <input type="text" value="3">
+        <input type="text" value="4">
+        <input type="text" value="5">
+    </div>
+
+    <script>
+        hello.onclick = e => {
+            hello.style.display = 'none';
+        };
+        // 댓글창 사라지기 효과 이런식으로.
+
+    </script>
+</body>
+</html>

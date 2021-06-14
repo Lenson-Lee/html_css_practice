@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+            width: 550px;
+            height: 350px;
+            border: 2px dashed gray;
+            background-color: orange;
+            background-image: url('./img/sky.jpg');
+            /* ./는 내가 있는 폴더 기준에서 시작. 생략해도 되는거. */
+            /* background-size: 200px; */
+            background-repeat: no-repeat;
+            /* 배경이 작아져도 바둑판처럼 반복안되는 설정. repeat은 반대로 설정.
+            repeat-x/repeat-y 가로만/세로만 반복해라. */
+            background-position: center;
+            /* 앞이 x 뒤가 y 축이 기준. left right tob bottom center 겹치면 하나로 생략가능 */
+            
+            background-size: cover;
+            /* 완벽한 풀사이즈는 아니지만 여백이 안생기는 최대한으로 맞춰준다.
+               미세하게 포지션을 주어 조정하지만 디자이너가 사진을 미리 잘라서 주는경우가 많음.  
+               contain은 차라리 여백이 생기더라도 딱 맞게 맞춰줌.  */
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="box">
+
+    </div>
+</body>
+</html>
