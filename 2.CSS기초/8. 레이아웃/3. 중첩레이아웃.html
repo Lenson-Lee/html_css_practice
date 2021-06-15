@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .container {
+            width: 700px;
+            padding: 20px;
+            border: 3px solid red;
+            /* overflow: hidden;
+            실무에서 자주 쓰이지만 쓰면 안되는 해결방법 2. */
+        }
+
+        /* 중첩 레이아웃 float 버그 해제
+        매 클래스마다 설정을 넣는게 아닌 해제를 위한 클래스를 먼저 설정하고
+        밑의 클래스를 적용. */
+        .clearfix::after {
+            content: '';
+            display:block;
+            clear: both;
+        }
+        
+        .box {
+            width: 200px;
+            height: 150px;
+            border: 3px solid green;
+            background: yellowgreen;
+            border-radius: 10px;
+            float: left;
+        }
+        /* .clearbox {
+            clear: both; */
+        /* 주먹구구식 해결방법 1. */
+        
+        .c2 {
+            width: 700px;
+            padding: 20px;
+            border: 3px solid blue;
+        }
+        .c3 {
+            width: 700px;
+            padding: 20px;
+            border: 3px solid tomato;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- .container>.box*3 -->
+    <!-- clearfix 클래스를 추가로 적용하여 버그 수정 -->
+    <div class="container clearfix">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+
+        <!-- <div class="clearbox"></div> -->
+        <!-- 주먹구구식 해결방법 1. -->
+    </div>
+
+    <div class="c2 clearfix">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+
+    <div class="c3 clearfix">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 박스를 제어할 때에는 블록요소를 제어하기.
+            ->>> 핵심은 a가 아니라 li
+            1. li 수평정렬하기
+            2. ul/li/a 순으로 코드 짜기
+            3. 정렬할때 배경색을 넣어두고 공간확인하면서 하기
+            4. ul태그 설정하다보면 배경색이 안나올텐데 이는 클리어픽스를 순서대로 넣어서 설정하면 해결
+            5. 
+             */
+        .navi {
+            list-style: none;
+            /* 태그앞 점 제거 */
+            width: 70%;
+            margin: 0 auto;
+            background: aqua;
+            /* li가 float되있어서 부모 높이값이 없어져 배경색이 앙나오니 클리어픽스 설정하기 */
+            padding: 0;
+        }
+        .navi li {
+            width: 10%;
+            float: left;
+            margin: 0% 1%;
+            text-align: center;
+            /* a태그는 인라인이라 float는 블록태그에 쓰는거다. */
+            padding-bottom: 10px;
+            background: red;
+            
+        }
+        
+        li:hover {
+            border-bottom: 3px solid red;
+        }
+
+        .navi li a {
+            
+            text-decoration: none;
+            /* a태그 밑줄제거 */
+            color: inherit;
+            /* 글자색 부모태그한테 상속받기(파란글자 ㅈㅣ워짐) */
+        }
+        
+        .clearfix::after {
+            content: '';
+            display:block;
+            clear: both;
+        }
+        
+
+    </style>
+</head>
+<body>
+    
+    <!-- ul.navi>li*5>a -->
+    <ul class="navi clearfix">
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="#">LINK</a></li>
+        <li><a href="#">BOARD</a></li>
+        <li><a href="#">LOGIN</a></li>
+    </ul>
+
+</body>
+</html>
