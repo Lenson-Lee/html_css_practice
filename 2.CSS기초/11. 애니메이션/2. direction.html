@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+            width: 100px;height: 100px;
+            background: tomato;
+            margin: 30px;
+            
+            animation: move 1.5s linear infinite;
+            animation-direction: reverse;
+            /*  normal  0% -> 100%
+                reverse 100% 시간에서 0% 시간으로 역주행
+                alternate 0->100->0->100......
+                alternate는 반복횟수가 1이면 적용 안된다. 최소 2부터 가능(위에서는 인피니티 영역)
+                infinite 남발하면 렉 걸린다. */
+        }
+        @keyframes move {
+            0% {
+                transform: translate(0, 0);
+            }
+            25% {
+                transform: translate(100px, 0);
+            }
+            50% {
+                transform: translate(100px, 100px);
+            }
+            75% {
+                transform: translate(0, 100px);
+            }
+            100% {
+                transform: translate(0, 0);
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

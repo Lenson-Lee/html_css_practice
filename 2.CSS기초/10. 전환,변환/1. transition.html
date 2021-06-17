@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+            width: 100px;height: 100px;
+            background: red;
+            margin: 50px;
+            /* transition은 원본에 걸어야 돌아올 떄도 효과가 들어간다 */
+
+            /* transition-property: width, background; 전부 하는거면 all이 기본이라 안적어도 된다. */
+            /* transition-duration: 2s; */
+            /* transition: width 2s, background 0.7s; */
+            /* transition: all 1s => transition: 1s; */
+            /* transition: 700ms -> 0.7초라는 뜻; */
+            /* transition-duration: 2s;    transition-delay: 0.3s; ->  transition: 2s 0.5s; */
+            /* transition: 3s;
+            transition-timing-function: ease-in; */
+            /*  linear가 텐션효과 없는 일정한 속도 
+                ease-in : 처음에느리고 뒤에 빠르게
+                cubic-bezier로 속도조절 가능 근데 전문적인거라 굳이..
+                step 등등 */
+            transition: all 3s 3s linear;
+
+            
+        }
+        .box:hover {
+            width: 300px;
+            background: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

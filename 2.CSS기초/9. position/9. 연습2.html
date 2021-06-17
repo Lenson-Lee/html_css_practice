@@ -5,11 +5,84 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
     <!-- 한줄만 만드는거임! 예시사진 세줄은 hover시에 나타나는거 보여주는거임~~ -->
 
+    <style>
+        .container {
+            display: flex;
+            /* 컨테이너 내부를 수평정렬 */
+            width: fit-content;
+            /* 마진을 주려면 width가 100%면 안되니 %나 fit 주기 */
+            margin: 50px auto 0;
+        }
+            /* 그림자효과 : box-shadow, text-shadow
+                ex) box-shadow : 가로/세로 그림자길이, 블러효과크기, 색상 */
+        .box {
+            
+            width: 100px;
+            height: 100px;
+            background: tomato;
+            border: 4px dashed red;
+            border-radius: 20%;
+            font-size: 30px;
+            line-height: 100px;
+            /* 왜 수직 정렬이 안맞는가.. */
+            text-align: center;
+            box-sizing: border-box;
+
+            box-shadow: 5px 5px 20px red;
+            /* 그림자효과 : box-shadow, text-shadow
+                ex) box-shadow : 가로/세로 그림자길이, 블러효과크기, 색상 */
+            margin-right: -30px;
+            /* !!이러면 일일히 안 줘두 된다! */
+
+
+        }
+        
+        .box:hover {
+            z-index: 1000;
+            position: relative;
+            /* bottom: 30px; */
+            transform: translatey(-20px);
+
+            width: 100px;
+            height: 100px;
+            background: yellowgreen;
+            border: 4px dashed yellow;
+            border-radius: 20%;
+            font-size: 30px;
+            line-height: 90px;
+            text-align: center;
+            box-sizing: border-box;
+
+            box-shadow: 0 0 20px green;
+        }
+        /* .box2 {
+            margin-left: -20px;
+        }
+        .box3 {
+            margin-left: -20px;
+        }
+        .box4 {
+            margin-left: -20px;
+        }
+        .box5 {
+            margin-left: -20px;
+        } */
+
+    </style>
+    
 </head>
 <body>
+    <div class="container">
+        <!-- 박스들을 편하게 제어하기 위해 컨테이너로 묶음 -->
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+        <div class="box box4">4</div>
+        <div class="box box5">5</div>
+    </div>
     
 </body>
 </html>

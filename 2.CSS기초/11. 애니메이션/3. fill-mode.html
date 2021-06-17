@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+            width: 100px;height: 100px;
+            background: tomato;
+            margin: 30px;
+
+            animation: move 2s 2s;
+            animation-fill-mode: forwards;
+            /*  none는 순간이동 해서 원위치에서 끝나는데
+                forwards는 끝나는 지점에서 멈춤
+                backwards는 시작하면 0%에서 시작하고 애니메이션 끝나면 원본으로 돌아옴
+                both는 애니메이션 0%~100%만 진행하고 원본은 나오지 않음 */
+        }
+
+        @keyframes move {
+            0% {
+                transform: translate(100px, 100px);
+                background: dodgerblue;
+            }
+            100% {
+                transform: translate(300px, 100px);
+                background: yellowgreen;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 개발자는 레이아웃만 잘 해도 풀스텍 가능... -->
+
+    <div class="box"></div>
+</body>
+</html>

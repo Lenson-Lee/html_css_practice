@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+            width: 100px;height: 100px;
+            background: green;
+
+        }
+        .box:hover {
+            /* animation-name: grow-up;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            animation-delay: 0.7s;
+            animation-iteration-count: infinite;
+            /* 횟수 또는 인피니트로 무한대 */
+            /* animation-direction: alternate; */
+
+            animation: grow-up 3s linear 0.3s infinite alternate;
+            
+        }
+        @keyframes grow-up {
+        /* 애니메이션 이름은 내가 짓는거다. */
+            0% {
+                width: 100px;
+            }
+            50% {
+                width: 500px;
+            }
+            100% {
+                width: 300px;
+            }
+            /* 효과 시간구간 설정 */
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
