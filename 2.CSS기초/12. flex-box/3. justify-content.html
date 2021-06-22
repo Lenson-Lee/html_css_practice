@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .container {
+            border: 4px solid #000;
+            display: flex;
+            /* row가 원래 수평배치인데 기본값 자체가 row여서 안써도 된다.
+                column은 수직으로 배치해줌
+                row reverse는 float right처럼 오른쪽으로 정렬된다.
+                column reverse 또한 밑에서 위로 배치 */
+            /* flex-wrap: wrap; */
+            /* 픽셀이 뭉개지지 않고 페이지가 좁아지면 아래로 블록이 내려간다.
+                nowrap은 뭉개진다 기본값이 nowrap */
+            flex-flow: row wrap;
+            /* jc */
+            /* justify-content: flex-start; */
+            /* 변한게 없다? -> 기본값이라는 거다~ */
+            justify-content: space-between;
+            /* space 3총사
+                space between
+                1번 마지막번 컨테이너 끝에 배치하고 균일하게 정렬하는 법 브라우저 크기가 변해도 
+                a,e가 끝에 유지되는걸 볼 수 있다. 
+                space around
+                양옆에 균일한 공간여백 만든다. 사이에 낀 애들은 공간이 2개씩 들어가서 균일하게 들어간 느낌이 안 든다.
+                -> space evenly 모두다 공간을 주며 균일한 공간. 양옆이 아니라 더 정갈해보임.
+                between은 마지막 양옆에 공간이 비어있는 차이가 있다.*/
+            
+        }
+        .item {
+            width: 150px; height: 100px;
+            background: red;
+            border: 4px dashed orange;
+            border-radius: 10px;
+            font-size: 40px;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <div class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+    </div>
+
+</body>
+</html>
