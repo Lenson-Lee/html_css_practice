@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- 768px이하는 반응형웹으로 보이도록 제작 -->
+<style>
+    .container {
+        width: 1200px;
+        box-sizing: border-box;
+    }
+    header {
+        display: block;
+        padding: 30px 0;
+        background: brown;
+        font-size: 30px;
+        text-align: center;
+    }
+    section {
+        display: flex;
+        padding: 30px auto;
+    }
+    section article:nth-child(2) {
+        order: -1;
+    }
+    section .main {
+        background: gray;
+        display: block;
+        text-align: center;
+        font-size: 20px;
+        padding: 80px;
+
+        flex: 4;
+    }
+    section .left {
+        display: block;
+        background: yellow;
+        font-size: 20px;
+        text-align: center;
+        padding: 80px;
+
+        flex: 1;
+    }
+    section .right {
+        display: block;
+        background: green;
+        font-size: 20px;
+        text-align: center;
+        padding: 80px;
+
+        flex: 1;
+        /* basis값 따로 0 지정 혹은 단축사용 */
+    }
+    footer {
+        display: block;
+        background: skyblue;
+        padding: 30px 0;
+        font-size: 30px;
+        text-align: center;
+
+    }
+
+    @media screen and (max-width: 768px) {
+        .container {
+            display: flex;
+            flex: column wrap;
+        }
+    }
+
+
+</style>
+<body>
+    <div class="container">
+        <header>Header</header>
+        <section>
+            <article class="main">
+                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+            </article>
+            <article class="left">Aside 1</article>
+            <article class="right">Aside 2</article>
+        </section>
+        <footer>Footer</footer>
+    </div>
+</body>
+</html>

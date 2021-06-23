@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- 768px이하는 반응형웹으로 보이도록 제작 -->
+<style>
+    .container {
+        /* 전체영역 1200px */
+        width: 1200px;
+        margin: 0 auto;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .container header {
+        background: brown;
+        flex: 1;
+        /* 1을 줘도 안떨어지는 이유 : container에 flex-wrap설정기본값이 no-wrap -> wrap값 주기 */
+        padding: 1em;
+    }
+    .container section {
+        display: flex;
+        /* section 속의 article 3 개가 수평정렬 되야하기 때문에 */
+    }
+    .container section article {
+        padding: 15em 1em;
+        /* 높이조정 여기서 했구나..! */
+    }
+
+    .container section article.main {
+        background: gray;
+        
+        /* basis값 따로 0 지정 혹은 단축사용 */
+        flex: 4;
+        order: 2;
+    }
+    .container section article.left {
+        background: yellow;
+        flex: 1;
+        order: 1;
+        /* 그냥 -1 주면끝이지만 다른 사람들에게 명시적으로 표현하기위해 순서대로 적어놓음 */
+    }
+    .container section article.right {
+        background: green;
+        flex: 1;
+        order: 3;
+    }
+    .container footer {
+        background: skyblue;
+        flex: 1;
+        padding: 1em;
+    }
+    
+    
+    
+    @media screen and (max-width: 768px) {
+        .container {
+            width: 100%;
+        }
+        .container section {
+            flex-direction: column;
+        }
+        .container section article {
+            padding: 1em;
+        }
+        .container section article.main {
+        order: 0
+        }
+    }
+
+
+
+</style>
+<body>
+    <div class="container">
+        <header>Header</header>
+        <section>
+            <article class="main">
+                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+            </article>
+            <article class="left">Aside 1</article>
+            <article class="right">Aside 2</article>
+        </section>
+        <footer>Footer</footer>
+    </div>
+</body>
+</html>
